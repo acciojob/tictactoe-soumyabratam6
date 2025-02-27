@@ -15,7 +15,7 @@ document.getElementById("submit").addEventListener("click", function () {
 });
 
 function startGame(player1, player2) {
-    let currentPlayer = player1;
+     let currentPlayer = capitalizeFirstLetter(player1);
     let currentSymbol = "X";
     let board = ["", "", "", "", "", "", "", "", ""];
     let gameActive = true;
@@ -65,4 +65,7 @@ function checkWinner(board, symbol) {
     return winningCombinations.some(combination => 
         combination.every(index => board[index] === symbol)
     );
+}
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
