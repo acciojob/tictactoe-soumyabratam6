@@ -32,7 +32,7 @@ function startGame(player1, player2) {
             this.textContent = currentSymbol;
 
             if (checkWinner(board, currentSymbol)) {
-                messageDiv.textContent = `${currentPlayer}, congratulations you won!`;
+                messageDiv.textContent = `${currentPlayer} congratulations you won!`;
                 gameActive = false;
                 return;
             }
@@ -43,7 +43,7 @@ function startGame(player1, player2) {
                 return;
             }
 
-            currentPlayer = currentPlayer === player1 ? player2 : player1;
+            currentPlayer = currentPlayer === player1 ? capitalizeFirstLetter(player2) : capitalizeFirstLetter(player1);
             currentSymbol = currentSymbol === "X" ? "O" : "X";
             messageDiv.textContent = `${currentPlayer}, you're up!`;
         });
