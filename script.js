@@ -16,7 +16,7 @@ document.getElementById("submit").addEventListener("click", function () {
 
 function startGame(player1, player2) {
      let currentPlayer = capitalizeFirstLetter(player1);
-    let currentSymbol = "X";
+    let currentSymbol = "x";
     let board = ["", "", "", "", "", "", "", "", ""];
     let gameActive = true;
     const messageDiv = document.querySelector(".message");
