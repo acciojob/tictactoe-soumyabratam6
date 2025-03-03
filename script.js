@@ -44,7 +44,7 @@ function startGame(player1, player2) {
             }
 
             currentPlayer = currentPlayer === player1 ? capitalizeFirstLetter(player2) : capitalizeFirstLetter(player1);
-            currentSymbol = currentSymbol === "X" ? "O" : "X";
+            currentSymbol = currentSymbol === "x" ? "o" : "x";
             messageDiv.textContent = `${currentPlayer}, you're up!`;
         });
     });
